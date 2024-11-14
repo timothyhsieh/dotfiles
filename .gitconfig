@@ -1,0 +1,16 @@
+[alias]
+  co = checkout
+  br = branch
+  ci = commit
+  st = status
+  unstage = reset HEAD --
+  last = log -1 HEAD
+  graph = log --graph --oneline --decorate
+  gp = "!f() { \
+    git add -Av .;git ci -m\"$1\";git push; \
+    };f"
+[user]
+      email = tim@fireroaddigital.com
+      name = Tim Hsieh
+[pull]
+      rebase = false
