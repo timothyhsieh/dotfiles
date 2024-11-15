@@ -14,3 +14,5 @@
       name = Tim Hsieh
 [pull]
       rebase = false
+[credential]
+      helper = /.daytona/daytona git-cred
