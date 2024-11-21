@@ -111,4 +111,4 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # VSCode overwrites our dotfile, so trick git into adding it.
-alias git="git -c 'include.path=/root/dotfiles/.gitconfig'"
+alias git="git -c 'include.path=~/dotfiles/.gitconfig'"
