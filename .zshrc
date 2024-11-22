@@ -112,3 +112,6 @@ source $ZSH/oh-my-zsh.sh
 
 # VSCode overwrites our dotfile, so trick git into adding it.
 alias git="git -c 'include.path=~/dotfiles/.gitconfig'"
+
+echo "Run .devcontainer/ddev-auth.sh to load your ssh key to ssh-agent and ddev."
+echo "Rim .devcontainer/ddev-firststart.sh to pull database and files from Pantheon."
