@@ -1,11 +1,15 @@
 #!/bin/bash
 
+# The .oh-my-zsh can be overwritten as a clean directory in a codespace rather
+# the retain the symlink to the dotfiles repository. This fixes that if
+# needed.
+
 # Define paths
 ORIG="$HOME/.oh-my-zsh"
 TARGET="/workspaces/.codespaces/.persistedshare/dotfiles/.oh-my-zsh"
 P10K_RELATIVE_PATH="custom/themes/powerlevel10k"
 
-# 1. Check if ~/.oh-my-zsh is a symlink
+# Check if ~/.oh-my-zsh is a symlink
 if [ ! -L "$ORIG" ]; then
   echo "🔍 ~/.oh-my-zsh is not a symlink."
 
@@ -37,10 +41,11 @@ if [ ! -L "$ORIG" ]; then
   else
     echo "ℹ️ No powerlevel10k theme found in backup"
   fi
+
+  # Reload Zsh config
+  echo "🔄 Sourcing ~/.zshrc"
+  source ~/.zshrc
+
 else
   echo "✅ ~/.oh-my-zsh is already a symlink — no changes made."
 fi
-
-# Reload Zsh config
-echo "🔄 Sourcing ~/.zshrc"
-source ~/.zshrc
