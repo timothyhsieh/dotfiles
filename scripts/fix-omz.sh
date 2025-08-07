@@ -44,7 +44,7 @@ if [ ! -L "$ORIG" ]; then
 
   # Reload Zsh config
   echo "🔄 Sourcing ~/.zshrc"
-  source ~/.zshrc
+  zsh - c "source ~/.zshrc"
 
 else
   echo "✅ ~/.oh-my-zsh is already a symlink — no changes made."
